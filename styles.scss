@@ -17,12 +17,36 @@ $Very-dark-violet: hsl(278, 68%, 11%);
 }
 
 body {
+    min-height: 100dvh;
+
     main {
         background-image: url("images/bg-main-desktop.png");
         background-size: contain;
         background-repeat: no-repeat;
         background-position: left center;
         min-height: 100dvh;
+        position: relative;
+
+        .bg__card__front__wrapper {
+            position: absolute;
+            top: 20.7%;
+            left: 11.3%;
+
+            .bg__card__front {
+                position: relative;
+            }
+
+            .bg__card__front__logo {
+                position: absolute;
+                top: 1.8rem;
+                left: 2.1rem;
+            }
+        }
+
+        .bg__card__back {
+            position: absolute;
+            top: 50%;
+        }
     }
 
     .attribution {
