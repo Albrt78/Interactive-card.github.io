@@ -1,0 +1,36 @@
+// Primary
+$Linear-gradient: hsl(249, 99%, 64%) to hsl(278, 94%, 30%); // active input border
+$Red: hsl(0, 100%, 66%); // input errors
+
+// Neutral
+$White: hsl(0, 0%, 100%);
+$Light-grayish-violet: hsl(270, 3%, 87%);
+$Dark-grayish-violet: hsl(279, 6%, 55%);
+$Very-dark-violet: hsl(278, 68%, 11%);
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    main {
+        background-image: url("images/bg-main-desktop.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: left center;
+        min-height: 100dvh;
+    }
+
+    .attribution {
+        font-size: 11px;
+        text-align: center;
+
+        a {
+            color: hsl(228, 45%, 44%);
+        }
+    }
+}
