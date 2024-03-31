@@ -14,10 +14,12 @@ $Very-dark-violet: hsl(278, 68%, 11%);
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    outline: none;
 }
 
 body {
     min-height: 100dvh;
+    font-family: "Space Grotesk", sans-serif;
 
     main {
         background-image: url("images/bg-main-desktop.png");
@@ -26,6 +28,10 @@ body {
         background-position: left center;
         min-height: 100dvh;
         position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        z-index: 1;
 
         .bg__card__front__wrapper {
             position: absolute;
@@ -41,11 +47,152 @@ body {
                 top: 1.8rem;
                 left: 2.1rem;
             }
+
+            .bg__card__front__detail {
+                position: absolute;
+                top: 8.7rem;
+                left: 2rem;
+
+                .bg__card__front__number {
+                    font-size: 1.8rem;
+                    color: $White;
+                    letter-spacing: 0.19rem;
+                }
+
+                .bg__card__front__info {
+                    display: flex;
+                    align-items: center;
+                    gap: 11.85rem;
+                    padding-top: 1.4rem;
+                    text-transform: uppercase;
+                    color: $White;
+
+                    .bg__card__front__name {
+                        font-size: 1.1rem;
+                    }
+
+                    .bg__card__front__date {
+                        font-size: 1.1rem;
+                    }
+                }
+            }
         }
 
-        .bg__card__back {
+        .bg__card__back__wrapper {
             position: absolute;
-            top: 50%;
+            top: 52.1%;
+            left: 17.9%;
+
+            .bg__card__back {
+                position: relative;
+            }
+
+            .bg__card__back__number {
+                position: absolute;
+                top: 44%;
+                right: 3.79rem;
+                color: $White;
+            }
+        }
+
+        .card__form {
+            display: flex;
+            flex-direction: column;
+            margin-inline-start: 52rem;
+            margin-inline-end: 15.7%;
+            margin-block-start: 17.1rem;
+            width: 100%;
+            height: auto;
+
+            .card__label {
+                text-transform: uppercase;
+                padding-bottom: 0.6rem;
+                font-size: 0.91rem;
+                letter-spacing: 0.03rem;
+            }
+
+            input {
+                padding-block: 0.8rem;
+                padding-inline-start: 1rem;
+                border: 1px solid $Dark-grayish-violet;
+                border-radius: 0.5rem;
+                width: 100%;
+                color: $Very-dark-violet;
+
+                &:focus,
+                &:active {
+                    border: 3px solid $Very-dark-violet;
+                }
+            }
+
+            .error {
+                color: $Red;
+                padding-top: 0.3rem;
+                font-weight: 600;
+                font-size: 0.9rem;
+                margin-bottom: 0.2rem;
+                opacity: 0;
+            }
+
+            ::placeholder {
+                font-size: 1rem;
+                font-family: "Space Grotesk", sans-serif;
+                letter-spacing: 0.06rem;
+            }
+
+            .card__date__wrapper {
+                width: 100%;
+                display: flex;
+                gap: 2rem;
+                margin-top: -0.2rem;
+
+                .card__date {
+                    width: 50%;
+                    height: 100%;
+
+                    .card__label {
+                        text-transform: uppercase;
+                        font-size: 0.91rem;
+                        letter-spacing: 0.03rem;
+                    }
+
+                    ::placeholder {
+                        font-size: 1rem;
+                        font-family: "Space Grotesk", sans-serif;
+                        letter-spacing: 0.06rem;
+                    }
+
+                    input {
+                        width: 44%;
+                        margin-top: 0.5rem;
+                    }
+                }
+
+                .card__CVC {
+                    width: 50%;
+                    margin-left: -2rem;
+
+                    ::placeholder {
+                        font-family: "Space Grotesk", sans-serif;
+                    }
+
+                    input {
+                        width: 100%;
+                        margin-top: 0.5rem;
+                    }
+                }
+            }
+
+            .form__button {
+                margin-top: 0.9rem;
+                padding-block: 0.8rem;
+                width: 100%;
+                border-radius: 0.5rem;
+                font-size: 1.2rem;
+                color: $White;
+                background-color: $Very-dark-violet;
+                font-family: "Space Grotesk", sans-serif;
+            }
         }
     }
 
@@ -55,6 +202,252 @@ body {
 
         a {
             color: hsl(228, 45%, 44%);
+        }
+    }
+
+    @media (max-width: 1280.98px) {
+        main {
+            .bg__card__front__wrapper {
+                position: absolute;
+                top: 12%;
+            }
+
+            .card__form {
+                margin-inline-start: 50rem;
+                margin-inline-end: 10%;
+                margin-block-start: 12em;
+            }
+        }
+    }
+
+    @media (max-width: 1125.98px) {
+        main {
+            .bg__card__front__wrapper {
+                top: 10%;
+                left: 7%;
+
+                .bg__card__front {
+                    width: 27rem;
+                }
+
+                .bg__card__front__detail {
+                    top: 8rem;
+
+                    .bg__card__front__number {
+                        font-size: 1.7rem;
+                    }
+
+                    .bg__card__front__info {
+                        .bg__card__front__name {
+                            font-size: 1rem;
+                        }
+
+                        .bg__card__front__date {
+                            font-size: 1rem;
+                        }
+                    }
+                }
+            }
+
+            .bg__card__back__wrapper {
+                left: 15%;
+
+                .bg__card__back {
+                    width: 27rem;
+                }
+            }
+
+            .card__form {
+                margin-inline-start: 40rem;
+                margin-inline-end: 7%;
+                margin-block-start: 12em;
+            }
+        }
+    }
+
+    @media (max-width: 885.98px) {
+        main {
+            background-image: url("images/bg-main-mobile.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: top center;
+
+            .bg__card__front__wrapper {
+                position: absolute;
+                top: 20.7%;
+                left: 5%;
+
+                .bg__card__front {
+                    max-width: 100%;
+                }
+            }
+
+            .bg__card__back__wrapper {
+                position: absolute;
+                top: 3rem;
+                left: 37%;
+                z-index: -1;
+
+                .bg__card__back {
+                    width: 100%;
+                }
+            }
+
+            .card__form {
+                display: flex;
+                flex-direction: column;
+                margin-inline-start: 2rem;
+                margin-inline-end: 2rem;
+                margin-block-start: 37rem;
+                margin-block-end: 2rem;
+
+                .card__date__wrapper {
+                    .card__date {
+                        width: 30%;
+                    }
+
+                    .card__CVC {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 768.98px) {
+        main {
+            .bg__card__front__wrapper {
+                .bg__card__front {
+                    width: 26rem;
+                }
+            }
+
+            .bg__card__back__wrapper {
+                .bg__card__back {
+                    width: 26rem;
+                }
+            }
+
+            .card__form {
+                margin-block-start: auto;
+            }
+        }
+    }
+
+    @media (max-width: 662.98px) {
+        main {
+            .bg__card__back__wrapper {
+                left: 27%;
+            }
+
+            .card__form {
+                .card__date__wrapper {
+                    .card__date {
+                        width: 40%;
+                    }
+
+                    .card__CVC {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 576.98px) {
+        main {
+            .bg__card__back__wrapper {
+                left: 20%;
+            }
+
+            .card__form {
+                .card__date__wrapper {
+                    .card__date {
+                        width: 45%;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 450.98px) {
+        main {
+            .bg__card__front__wrapper {
+                left: 5%;
+
+                .bg__card__front {
+                    width: 20rem;
+                }
+
+                .bg__card__front__logo {
+                    width: 4rem;
+                }
+
+                .bg__card__front__detail {
+                    top: 6rem;
+
+                    .bg__card__front__number {
+                        font-size: 1.2rem;
+                    }
+
+                    .bg__card__front__info {
+                        gap: 9rem;
+                        padding-top: 1rem;
+
+                        .bg__card__front__name {
+                            font-size: 0.7rem;
+                        }
+
+                        .bg__card__front__date {
+                            font-size: 0.7rem;
+                        }
+                    }
+                }
+            }
+
+            .bg__card__back__wrapper {
+                top: 5%;
+                left: 10%;
+
+                .bg__card__back {
+                    width: 20rem;
+                }
+
+                .bg__card__back__number {
+                    top: 42%;
+                    right: 2.59rem;
+                }
+            }
+
+            .card__form {
+                margin-block-start: 23rem;
+
+                .card__label {
+                    font-size: 0.8rem;
+                }
+
+                .card__date__wrapper {
+                    .card__date {
+                        width: 45%;
+
+                        .card__label {
+                            font-size: 0.8rem;
+                        }
+                    }
+
+                    .card__CVC {
+                        width: 55%;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 360.98px) {
+        main {
+            .bg__card__back__wrapper {
+                left: 7%;
+            }
         }
     }
 }

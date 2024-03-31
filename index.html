@@ -13,6 +13,13 @@
             href="./images/favicon-32x32.png"
         />
 
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Kumbh+Sans:wght@100..900&family=League+Spartan:wght@100..900&family=Lexend+Deca&family=Manrope:wght@200..800&family=Space+Grotesk:wght@500&display=swap"
+            rel="stylesheet"
+        />
+
         <title>Frontend Mentor | Interactive card details form</title>
     </head>
     <body>
@@ -28,13 +35,86 @@
                     alt=""
                     class="bg__card__front__logo"
                 />
+
+                <section class="bg__card__front__detail">
+                    <p class="bg__card__front__number">0000 0000 0000 0000</p>
+
+                    <section class="bg__card__front__info">
+                        <p class="bg__card__front__name">Jane Appleseed</p>
+                        <p class="bg__card__front__date">00/00</p>
+                    </section>
+                </section>
             </section>
 
-            <img src="images/bg-card-back.png" alt="" class="bg__card__back" />
+            <section class="bg__card__back__wrapper">
+                <img
+                    src="images/bg-card-back.png"
+                    alt=""
+                    class="bg__card__back"
+                />
+                <p class="bg__card__back__number">000</p>
+            </section>
 
-            0000 0000 0000 0000 Jane Appleseed 00/00 000 Cardholder Name e.g.
-            Jane Appleseed Card Number e.g. 1234 5678 9123 0000 Exp. Date
-            (MM/YY) MM YY CVC e.g. 123 Confirm
+            <form action="#" class="card__form">
+                <label for="cardholder-name" class="card__label"
+                    >Cardholder Name</label
+                >
+                <input
+                    type="text"
+                    name="cardholderName"
+                    id="cardholder-name"
+                    placeholder="e.g. Jane Appleseed"
+                />
+                <p class="error">Can't be blank</p>
+
+                <label for="card-number" class="card__label">Card Number</label>
+                <input
+                    type="text"
+                    name="cardNumber"
+                    id="card-number"
+                    placeholder="e.g. 1234 5678 9123 0000"
+                />
+                <p class="error">Wrong format, numbers only</p>
+
+                <section class="card__date__wrapper">
+                    <section class="card__date">
+                        <label for="card-date" class="card__label"
+                            >Exp. date (mm/yy)
+                            <input
+                                type="text"
+                                name="cardDateMonth"
+                                id="card-date"
+                                placeholder="MM"
+                                maxlength="2"
+                            />
+
+                            <input
+                                type="text"
+                                name="cardDateYear"
+                                id="card-year"
+                                placeholder="YY"
+                                maxlength="2"
+                                minlength="2"
+                            />
+                        </label>
+                        <p class="error">Can't be blank</p>
+                    </section>
+
+                    <section class="card__CVC">
+                        <label for="cvc" class="card__label">CVC</label>
+                        <input
+                            type="text"
+                            name="cvcNumber"
+                            id="cvc"
+                            placeholder="e.g. 123"
+                            maxlength="3"
+                        />
+                        <p class="error">Can't be blank</p>
+                    </section>
+                </section>
+
+                <button class="form__button">Confirm</button>
+            </form>
         </main>
 
         <!-- Completed state start -->
