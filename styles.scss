@@ -125,13 +125,13 @@ body {
                 }
             }
 
-            .error {
+            .error__message {
                 color: $Red;
                 padding-top: 0.3rem;
                 font-weight: 600;
                 font-size: 0.9rem;
                 margin-bottom: 0.2rem;
-                opacity: 0;
+                visibility: hidden;
             }
 
             ::placeholder {
@@ -447,6 +447,84 @@ body {
         main {
             .bg__card__back__wrapper {
                 left: 7%;
+            }
+        }
+    }
+
+    @media (max-width: 320.98px) {
+        main {
+            .bg__card__front__wrapper {
+                top: 17.5%;
+                left: 5%;
+
+                .bg__card__front {
+                    width: 17rem;
+                }
+
+                .bg__card__front__logo {
+                    width: 3rem;
+                }
+
+                .bg__card__front__detail {
+                    top: 5rem;
+
+                    .bg__card__front__number {
+                        font-size: 0.85rem;
+                    }
+
+                    .bg__card__front__info {
+                        gap: 6.8rem;
+                        padding-top: 1rem;
+
+                        .bg__card__front__name {
+                            font-size: 0.6rem;
+                        }
+
+                        .bg__card__front__date {
+                            font-size: 0.6rem;
+                        }
+                    }
+                }
+            }
+
+            .bg__card__back__wrapper {
+                left: 10%;
+
+                .bg__card__back {
+                    width: 17rem;
+                }
+            }
+
+            .card__form {
+                .card__label {
+                    font-size: 0.6rem;
+                }
+
+                .error {
+                    font-size: 0.5rem;
+                }
+
+                ::placeholder {
+                    font-size: 0.6rem;
+                }
+
+                .card__date__wrapper {
+                    .card__date {
+                        width: 40%;
+
+                        .card__label {
+                            font-size: 0.6rem;
+                        }
+
+                        ::placeholder {
+                            font-size: 0.6rem;
+                        }
+                    }
+                }
+
+                .form__button {
+                    font-size: 0.9rem;
+                }
             }
         }
     }

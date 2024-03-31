@@ -65,7 +65,9 @@
                     id="cardholder-name"
                     placeholder="e.g. Jane Appleseed"
                 />
-                <p class="error">Can't be blank</p>
+                <p class="cardholder__name__error__message error__message">
+                    Can't be blank
+                </p>
 
                 <label for="card-number" class="card__label">Card Number</label>
                 <input
@@ -74,7 +76,9 @@
                     id="card-number"
                     placeholder="e.g. 1234 5678 9123 0000"
                 />
-                <p class="error">Wrong format, numbers only</p>
+                <p class="cardnumber__name__error__message error__message">
+                    Wrong format, numbers only
+                </p>
 
                 <section class="card__date__wrapper">
                     <section class="card__date">
@@ -97,7 +101,11 @@
                                 minlength="2"
                             />
                         </label>
-                        <p class="error">Can't be blank</p>
+                        <p
+                            class="cardnumber__format__error__message error__message"
+                        >
+                            Can't be blank
+                        </p>
                     </section>
 
                     <section class="card__CVC">
@@ -109,7 +117,9 @@
                             placeholder="e.g. 123"
                             maxlength="3"
                         />
-                        <p class="error">Can't be blank</p>
+                        <p class="cvc__error__message error__message">
+                            Can't be blank
+                        </p>
                     </section>
                 </section>
 
